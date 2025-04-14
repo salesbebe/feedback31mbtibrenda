@@ -13,16 +13,11 @@ function handleMudarNotaAvaliacao(nota){
 
 }
 
-function handleSubmit(){
-  notaAvaliacao !== 0 ?  (setSubmited(true)) : (setSubmited(false), alert("Por favor selecione uma nota antes de enviar")) 
-
-
-}
 
 
   return(
     submited === false ? (
-      <CardInicial setNotaAvaliacao={setNotaAvaliacao} handleSubmit={handleSubmit}/>
+      <CardInicial setNotaAvaliacao={setNotaAvaliacao} notaAvaliacao={notaAvaliacao} setSubmited={setSubmited}/>
      ) :  (
       <CardFinal notaAvaliacao={notaAvaliacao}/>
 
